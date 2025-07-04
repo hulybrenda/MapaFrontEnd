@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Formulário de contato com Brenda Huly." />
+  <meta name="keywords" content="Contato, Brenda Huly, Engenharia de Software" />
+  <title>Contato - Brenda Huly</title>
+  <link rel="stylesheet" href="style_mapa.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobremim.html">Sobre Mim</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <h1>Deixe seu contato</h1>
+      <form onsubmit="return validarFormulario();">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagemContato" name="mensagem" rows="5" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="msg-enviada" class="hidden">Mensagem enviada com sucesso!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Brenda Huly Castro Rocha</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

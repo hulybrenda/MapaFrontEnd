@@ -1,16 +1,17 @@
-body {
+/*estilo base do corpo*/
+body {  
   font-family: Arial, sans-serif;
   background-color: #f0f0f5;
   margin: 0;
   padding: 0;
   color: #333;
 }
-
+/*cabeçalho*/
 header {
   background-color: #600454;
   padding: 15px 0;
 }
-
+/*menu de navegação*/
 .menu {
   list-style: none;
   display: flex;
@@ -19,18 +20,18 @@ header {
   padding: 0;
   margin: 0;
 }
-
+/*links do menu*/
 .menu li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
+/* Efeito hover e item ativo no menu */
 .menu a:hover,
 .menu a.active {
   text-decoration: underline;
 }
-
+/*conteudo incipal*/
 main {
   max-width: 800px;
   margin: 20px auto;
@@ -38,12 +39,12 @@ main {
   background-color: #fff;
   border-radius: 8px;
 }
-
+/*titulo principal*/
 h1 {
   color: #600454;
   margin-bottom: 15px;
 }
-
+/*listas*/
 ul {
   padding-left: 20px;
 }
@@ -51,7 +52,7 @@ ul {
 ul li {
   margin-bottom: 10px;
 }
-
+/*links*/
 a {
   color: #600454;
   text-decoration: none;
@@ -60,7 +61,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+/*botoes*/
 button {
   background-color: #600454;
   color: white;
@@ -73,7 +74,7 @@ button {
 button:hover {
   background-color: #8843a3;
 }
-
+/*rodapé*/
 footer {
   text-align: center;
   padding: 10px;
@@ -81,6 +82,12 @@ footer {
   margin-top: 20px;
   font-size: 0.9em;
   color: #555;
+}
+/* Mensagem de sucesso no formulário*/
+#msg-enviada {
+  font-weight: bold;   
+  margin-top: 15px;           /* Espaço acima da mensagem */
+  color: rgb(128, 0, 64);               /* Cor verde para indicar sucesso */
 }
 
 /* Mensagem especial */
@@ -98,4 +105,15 @@ footer {
   main {
     padding: 10px;
   }
+/*campo de formulario*/
+  input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
 }
