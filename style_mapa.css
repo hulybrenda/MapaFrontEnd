@@ -115,5 +115,93 @@ footer {
   box-sizing: border-box;
   font-size: 1em;
 }
+/* Popup de sucesso */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-conteudo {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.popup-conteudo p {
+  font-size: 1.2em;
+  color: #600454;
+  margin-bottom: 20px;
+}
+
+.popup-conteudo button {
+  background-color: #600454;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-conteudo button:hover {
+  background-color: #8843a3;
+}
+
+.hidden {
+  display: none;
+}
+/* popup de sucesso */
+.popup {
+  position: fixed;         
+  top: 0;                  
+  left: 0;
+  width: 100%;            
+  height: 100%;            
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;           
+  justify-content: center; 
+  align-items: center;    
+  z-index: 1000;           
+}
+
+/* Conteúdo do popup */
+.popup-conteudo {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Botão do popup */
+.popup-conteudo button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #600454;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.popup-conteudo button:hover {
+  background-color: #8843a3;
+}
+
+/* Classe para esconder elementos */
+.hidden {
+  display: none;
+}
+
 
 }

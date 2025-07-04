@@ -1,6 +1,6 @@
 // Executa quando o DOM estiver completamente carregado
 document.addEventListener('DOMContentLoaded', () => {
-  //  mostrar/ocultar mensagem especial na página inicial 
+  // Mostrar/ocultar mensagem especial na página inicial 
   const btnMensagem = document.getElementById('btnMensagem');
   const mensagem = document.getElementById('mensagem');
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // borda muda de cor ao focar e desfocar nos campos do formulário 
+  // Alterar borda dos campos ao focar/desfocar
   const inputs = document.querySelectorAll('input, textarea');
   inputs.forEach(input => {
     input.addEventListener('focus', () => {
@@ -21,21 +21,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Validação do formulário antes do envio 
+  // Validação e envio do formulário via Fetch com popup
   const form = document.querySelector('form[action^="https://formspree.io"]');
+  const popup = document.getElementById('popup-sucesso');
+
   if (form) {
     form.addEventListener('submit', (event) => {
+      event.preventDefault(); 
+
       const nome = document.getElementById('nome').value.trim();
       const email = document.getElementById('email').value.trim();
       const mensagemForm = document.getElementById('mensagemContato').value.trim();
-      const aviso = document.getElementById('msg-enviada');
 
       if (!nome || !email || !mensagemForm) {
         alert('Por favor, preencha todos os campos.');
-        event.preventDefault(); // impede o envio
-      } else {
-        
+        return;
       }
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          popup.classList.remove('hidden');
+        } else {
+          alert('Erro ao enviar. Tente novamente mais tarde.');
+        }
+      })
+      .catch(() => {
+        alert('Erro de conexão. Verifique sua internet.');
+      });
     });
   }
 });
+
+// Função para fechar o popup de sucesso 
+function fecharPopup() {
+  const popup = document.getElementById('popup-sucesso');
+  popup.classList.add('hidden');
+}

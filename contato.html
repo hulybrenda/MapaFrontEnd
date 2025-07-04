@@ -23,7 +23,7 @@
   <main>
     <section class="contato">
       <h1>Deixe seu contato</h1>
-      <form action="https://formspree.io/f/mgvybeoo" method="POST">
+      <form id="formulario-contato" action="https://formspree.io/f/mgvybeoo" method="POST">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -33,20 +33,25 @@
         <label for="mensagem">Mensagem:</label><br>
         <textarea id="mensagemContato" name="mensagem" rows="5" required></textarea><br><br>
 
-        
         <button type="submit">Enviar</button>
       </form>
 
-     
-      <p id="msg-enviada" class="hidden">Mensagem enviada com sucesso!</p>
+
     </section>
+
+   
+    <div id="popup-sucesso" class="popup hidden">
+      <div class="popup-conteudo">
+        <p>Mensagem enviada com sucesso!</p>
+        <button onclick="fecharPopup()">Fechar</button>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 Brenda Huly Castro Rocha</p>
   </footer>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
