@@ -86,8 +86,8 @@ footer {
 /* Mensagem de sucesso no formulário*/
 #msg-enviada {
   font-weight: bold;   
-  margin-top: 15px;           /* Espaço acima da mensagem */
-  color: rgb(128, 0, 64);               /* Cor verde para indicar sucesso */
+  margin-top: 15px;           
+  color: rgb(128, 0, 85);              
 }
 
 /* Mensagem especial */
